@@ -1,0 +1,14 @@
+#include "object.h"
+
+#ifndef FACTORY_H
+#define FACTORY_H
+
+//Класс "Завод" для переработки мусора
+class Plant:protected Object{
+protected:
+    int distance_cost; //Стоимость 
+    
+    Factory();
+};
+
+#endif // FACTORY_H
