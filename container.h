@@ -8,7 +8,7 @@
 class Container:protected Object{
 public:
     friend std::ostream& operator<<(std::ostream& out, const Container& plant); //Перегрузка оператора вывода
-    friend std::istream& operator>>(std::istream& in, const Container& plant); //Перегрузка оператора ввода
+    friend std::istream& operator>>(std::istream& in, const Container& plant); //Перегрузка оператора вводаыыафа
 };
 
 #endif // CONTAINER_H
