@@ -12,8 +12,7 @@
         void delete_plant(set<Plant> plants_set, int id); //Функция, удаляющая завод
         void delete_container(set<Container> containers_set, int id); //Функция, удаляющая контейнер
         void start_menu(); //Запускает графическое приложение с основным меню
-        void change(int id); //Позволяет редактировать информацию какого-либо объекта по его ID
-        Menu();
+        void change(int id); //Позволяет редактировать информацию
 };
 
 #endif // MENU_H
