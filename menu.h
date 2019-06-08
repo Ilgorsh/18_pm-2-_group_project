@@ -13,6 +13,8 @@
         void delete_container(set<Container> containers_set, int id); //Функция, удаляющая контейнер
         void start_menu(); //Запускает графическое приложение с основным меню
         void change(int id); //Позволяет редактировать информацию
+        void check_password();
+        Menu();
 };
 
 #endif // MENU_H
