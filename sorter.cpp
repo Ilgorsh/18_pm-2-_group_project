@@ -1,6 +1,6 @@
-#include "sorter.h"
+#include "manager.h"
 
-Sorter::Sorter()
+Manager::Manager()
 {
 
 }
