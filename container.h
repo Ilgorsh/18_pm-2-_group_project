@@ -5,7 +5,9 @@
 class Container:protected Object
 {
 public:
-Container();
+    friend std::ostream& operator<<(std::ostream& out, const Container& plant); //Перегрузка оператора вывода
+    friend std::istream& operator>>(std::istream& in, const Container& plant); //Перегрузка оператора ввода
+    Container();//Конструктор бы сделать
 };
 
 #endif // CONTAINER_H
