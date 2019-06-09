@@ -1,6 +1,6 @@
 #include "menu.h"
 
-menu::menu()
+Menu::Menu()
 {
 
 }
