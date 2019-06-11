@@ -2,7 +2,7 @@
 #define PLANT_H
 #include "object.h"
 
-class Plant : protected Object
+class Plant : public Object
 {
 public:
   int distance_cost; //Стоимость единицы расстояния для вывоза мусора
@@ -14,6 +14,11 @@ public:
   int getcoordx();
   int getcoordy();
   int get_distance_cost();
+  bool getmetal();
+  bool getpaper();
+  bool getorganic();
+  bool getplastic();
+  bool getglass();
   void setid(int id);
   void setx(int x);
   void sety(int y);

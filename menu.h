@@ -11,6 +11,7 @@
         void print_list();//Выводит список заводов с прикреплёнными контейнерами
         void delete_plant(set<Plant> plants_set, int id); //Функция, удаляющая завод
         void delete_container(set<Container> containers_set, int id); //Функция, удаляющая контейнер
+        void start_menu(); //Запускает графическое приложение с основным меню
         void change(int id); //Позволяет редактировать информацию
         void check_password();
         Menu();

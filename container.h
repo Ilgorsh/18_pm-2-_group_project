@@ -2,7 +2,7 @@
 #define CONTAINER_H
 #include "object.h"
 
-class Container:protected Object
+class Container:public Object
 {
 public:
     friend std::ostream& operator<<(std::ostream& out, const Container& plant); //Перегрузка оператора вывода
@@ -12,6 +12,11 @@ public:
     bool getmaterial(bool a);
     int getcoordx();
     int getcoordy();
+    bool getmetal();
+    bool getpaper();
+    bool getorganic();
+    bool getplastic();
+    bool getglass();
     void setid(int id);
     void setx(int x);
     void sety(int y);
