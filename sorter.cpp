@@ -61,7 +61,7 @@ set<Plant> Sorter::read_Plants()
     bool b;
     Plant plant;
     ifstream in;
-    in.open("Containers.bin");
+    in.open("Plants.bin");
     if(in.is_open())
         cout<<"File is open"<<endl;
     else
