@@ -29,6 +29,7 @@ public:
   void setmat_glass(bool a);
   void setmat_plastic(bool a);
   void setmat_paper(bool a);
+
 };
 
 #endif // PLANT_H
