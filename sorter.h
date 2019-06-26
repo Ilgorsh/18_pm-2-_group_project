@@ -1,3 +1,7 @@
+/*!
+*\file Сортер
+*\brief Файл сортировщика
+*/
 #ifndef SORTER_H
 #define SORTER_H
 #include "plant.h"
@@ -5,22 +9,43 @@
 #include <set>
 #include <map>
 
-class Sorter
+class Sorter :protected Container , protected Plant
 {
 private:
 
 protected:
     Sorter();
-    void remap(map<Container,set<Plant>> inmap);
-
-    void sorter();
-    void sorter_container_to_plant(set<Container>,set<Plant>);
-    map<int, set<int> > mapp_container_to_plant(set<Container> containers_list, set<Plant> plants_list); //Метод, сопоставляющий каждой фабрике список из контейнеров
-    map<int, set<int> > mapper_plant_to_container(set<Plant> plants_list, set<Container> containers_list); //Функция, привязывающая контейнер к списку заводов
 public:
+    /*!
+     * \brief Считывание контейнера
+     * \return сет контейнеров
+     */
     static set<Container> read_Containers();
-     static double cost(Container container,Plant plant);
+    /*!
+     * \brief подсчёт стоимости перевозки от контейнера ло завода
+     * \param контейнер
+     * \param завод
+     * \return
+     */
+    static int cost(Container container,Plant plant);
+    /*!
+     * \brief Считывание заводов из файла
+     * \return Сет заводов
+     */
     static set<Plant> read_Plants();
+    /*!
+     * \brief переводит привязку контейнер-> заводы в завод -> контейнеры
+     * \param  контейнер-> заводы
+     * \return завод -> контейнеры
+     */
+    static map<Plant,set<Container>> remap(map<Container,set<Plant>> const inmap);
+    /*!
+     * \brief привязка заводов к контейнерам согласно стоимости перевозки
+     * \param Вводимые контейнеры
+     * \param Вводимые заводы
+     * \return
+     */
+    static map<Container,set<Plant>> Map(set<Container> Containers,set<Plant> Plants);
 };
 
 #endif // SORTER_H

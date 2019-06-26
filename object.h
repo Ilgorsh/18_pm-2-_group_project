@@ -1,3 +1,7 @@
+/*!
+\file object.h
+\b лбьект
+*/
 #ifndef OBJECT_H
 #define OBJECT_H
 #include <iostream>
@@ -7,17 +11,20 @@ using namespace std;
 
 class Object{
     protected:
-        int encounters;//Сколько раз обьект встречается в разных списках (техническая переменная)
         int id;
         int x, y; //Координаты по x и y, отвечающие за местополжение объекта
         bool metal, paper, glass, plastic, organic;//Массив булов для материалов
-        map<string, string> Service_list;
-        float volume; //Объем объекта (ПОКА НЕ ДЕЛАЕМ! СНАЧАЛА СДЕЛАЕМ ДРУГОЕ ВСЕ!)
+       // char *name; //назвоние
     public:
-        int get_encounters();
+        /*!
+         * \brief Метод определения числа типов мусора
+         * \return число типов мусора
+         */
         int get_number_of_types();
-        void set_encounters(int encounters);
+        //  void setname(char* h);
         Object();
+        //char * getname();
+
 };
 
 #endif // OBJECT_H

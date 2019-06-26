@@ -1,11 +1,16 @@
-#include "mainwindow.h"
-#include <QApplication>
+/*!
+\file main.cpp
+\b Главная функция программы
+*/
+#include <iostream>
+#include "menu.h"
 
-int main(int argc, char *argv[])
+using namespace std;
+
+
+int main()
 {
-QApplication a(argc, argv);
-MainWindow w;
-w.show();
-
-return a.exec();
+    Menu op;
+    op.menu_realiz();
+    return 0;
 }

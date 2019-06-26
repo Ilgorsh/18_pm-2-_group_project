@@ -1,3 +1,7 @@
+/*!
+\file plant.h
+\b завод
+*/
 #ifndef PLANT_H
 #define PLANT_H
 #include "object.h"
@@ -5,6 +9,7 @@
 class Plant : public Object
 {
 public:
+  Plant operator = (const Plant& equal);
   int distance_cost; //Стоимость единицы расстояния для вывоза мусора
   Plant();
   friend std::ostream& operator<<(std::ostream& out, const Plant& plant); //Перегрузка оператора вывода
@@ -29,6 +34,14 @@ public:
   void setmat_glass(bool a);
   void setmat_plastic(bool a);
   void setmat_paper(bool a);
+  bool operator ==(const Plant&rightObj) const
+  {
+      return (id== rightObj.id);
+  }
+  bool operator < (const Plant & plant) const
+  {
+      return (id<plant.id);
+  }
 
 };
 
